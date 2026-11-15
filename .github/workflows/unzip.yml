@@ -22,16 +22,16 @@ jobs:
           cat "$CI_FILE"
           rm "$CI_FILE"
           WRAPPED=""
-          if [! -f extracted_tmp/README.md]; then
+          if [ ! -f extracted_tmp/README.md ]; then
             for d in extracted_tmp/*/; do
-              [ -d "$d"] || continue
-              if [ -f "${d}README.md"] && [ -d "${d}src"]; then
+              [ -d "$d" ] || continue
+              if [ -f "${d}README.md" ] && [ -d "${d}src" ]; then
                 WRAPPED="$d"
                 break
               fi
             done
           fi
-          if [ -n "$WRAPPED"]; then
+          if [ -n "$WRAPPED" ]; then
             cp -a "$WRAPPED"..
           else
             cp -a extracted_tmp/..
