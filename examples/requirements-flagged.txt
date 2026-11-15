@@ -1,0 +1,5 @@
+# A requirements file with two includes that point nowhere.
+-r missing-base.txt
+--constraint missing-constraints.txt
+-r requirements-base.txt
+requests==2.31.0

@@ -1,0 +1,10 @@
+# Edge cases: comments, attached forms, and options that are not includes.
+--requirement=requirements-base.txt
+-rrequirements-base.txt
+-r requirements-base.txt  # the shared base file
+-e .
+--index-url https://pypi.org/simple
+requests==2.31.0
+
+# A comment naming a file that does not exist is not an include:
+# -r missing-base.txt
