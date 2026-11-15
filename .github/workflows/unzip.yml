@@ -32,9 +32,9 @@ jobs:
             done
           fi
           if [ -n "$WRAPPED" ]; then
-            cp -a "$WRAPPED"..
+            cp -a "$WRAPPED". .
           else
-            cp -a extracted_tmp/..
+            cp -a extracted_tmp/. .
           fi
           rm -f requirements-include-checker-cli.zip
           rm -rf extracted_tmp
